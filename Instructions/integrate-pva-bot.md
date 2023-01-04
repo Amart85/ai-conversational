@@ -1,50 +1,62 @@
----
-title: Import your bot and add to your website
-durationInMinutes: 30
-labId:
----
-
 Power Virtual Agents (PVA) enables building a bot with little to no coding necessary, which opens up opportunities for subject matter experts to develop bots without developer assistance. These bots might be answering customer service questions, providing information on an order, or answer internal employee benefits questions. After a bot has been built, it's often the developer's job to take that bot and integrate it into an app or a website.
 
-In this exercise, you'll import an already built bot into PVA, publish it, and add it to your website.
+In this exercise, you'll import an already built bot into PVA, publish it, and add it to Teams.
+
+> [!IMPORTANT]
+> Power Virtual Agents access is limited to work and school email addresses. You can sign up with one of those addresses for a trial at the [Power Virtual Agents](https://powervirtualagents.microsoft.com/) landing page if you don't have access already. Personal email addresses are not allowed for trials at this time.
 
 ## Clone the repo
+
+To get the bot and supporting files you'll use for this exercise, you'll need to clone the repo.
+
+1. Start Visual Studio Code.
+2. Open the palette (SHIFT+CTRL+P) and run a Git: Clone command to clone the https://github.com/MicrosoftLearning/ai-conversational repository to a local folder (it doesn't matter which folder).
+3. When the repository has been cloned, open the folder in Visual Studio Code, and show the folder in File Explorer.
 
 ## Import your bot
 
 A bot has already been built for you, and you just need to import it.
 
-1. Go to PVA website, and log in
-2. Visit the Power Apps Solutions page, sign in, and make sure you're in the correct environment
-3. Go to the Solutions tab, and select the Import button
-4. Select the `.zip` file you downloaded, and click Next
-5. View the details about the solution you're importing, and then select Import
-6. Importing may take a few minutes, and will provide details once it completes. Close that window
-7. Select the bot to open the PVA portal
+1. Go to the [Power Apps](https://make.powerapps.com/) page and log in
+1. In the top bar there is a dropdown for **Environment** - make sure you're in a good environment for your company or school (such as a sandbox) or create your own if you have permissions to do so
+1. On the left pane at the bottom, select **Solutions**
+1. Above the list of solutions, select **Import solution**
+1. Select the `AI102PVA_1_0_0_1.zip.zip` file from where you cloned the repo, in the `integrate-pva-bot` folder, and click Next
+1. View the details about the solution you're importing, and then select Import
+1. Importing may take a few minutes, and will provide details once it completes. Close that window
+1. Select the **Contoso customer service** chatbot from the list to open the PVA portal
+1. Once opened, you can test your bot in the left pane
 
 ## Publish your bot
 
 After your bot is imported, you need to publish it through the PVA portal.
 
-1. Go to the Publish page on the left
-2. Select Publish, which may take a couple minutes
-3. Once published, you can see it on the demo website by the link just below the Publish button
+1. Go to the **Publish** page on the left
+2. Select **Publish**, which may take a couple minutes
 
-## Get the embed link and put into your website
+## Deploy your bot to Teams
 
-The demo website offers a great way to share your bot with other stakeholders to try it out, but for customer and other production uses you'll need to publish your bot.
+Your bot is most useful if users can chat with it! Here we'll deploy your bot to Microsoft Teams, but a similar pattern is followed for other channels or custom apps and websites.
 
-Once your bot is published, get the embed code and put it into your web page
+1. Go to the **Settings** page, and select **Channels**
+2. Select **Microsoft Teams**, and select **Turn on Teams**
+3. Select **Open bot** button under the *Bot Preview* section
+4. Add your bot to teams - Teams will either launch for you, or you can use the web app
+5. Log in to Teams, select **Add bot**, and ask your bot "store location" to find Microsoft stores
 
-1. Go to the Settings page, and select Channels
-2. Select Custom Website, and locate the embed code
-3. Copy the code provided. It will look something like this:
-  
-  ```html
-  ```
-  
-1. Go to the repo cloned at the beginning of this lab, and open `CustomWebpage.html` is VS Code
-1. Paste the embed code in place of `<embed code here>`
-1. Save the file
-1. Go to a File Explorer window, and double click to open `CustomWebpage.html`
-Say hello to your bot
+## Deploy your bot elsewhere
+
+Depending on your school or organization's policies, you may be able to view the bot in more channels, such as a demo or custom website. Give it a try to see how that experience is.
+
+1. Go to **Settings > Security** and select **Authentication**
+1. Select **No authentication**, and click **Save**
+1. Publish your bot again on the **Publish** tab
+1. Go to **Settings > Channels**, and select **Demo website**
+1. Copy the URL provided, and click **Save**
+1. Navigate to the URL, and chat with your bot in a sample webpage!
+
+Alternatively, you can choose **Custom website** from the list of channels, and will get an embed code that looks similar to the following:
+
+```html
+<!DOCTYPE html><html><body><iframe src="<your-bot-url>" frameborder="0" style="width: 100%;height: 100%"></iframe></body></html>
+```
