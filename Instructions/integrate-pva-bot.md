@@ -5,13 +5,11 @@ In this exercise, you'll import an already built bot into PVA, publish it, and a
 > [!IMPORTANT]
 > Power Virtual Agents access is limited to work and school email addresses. You can sign up with one of those addresses for a trial at the [Power Virtual Agents](https://powervirtualagents.microsoft.com/) landing page if you don't have access already. Personal email addresses are not allowed for trials at this time.
 
-## Clone the repo
+## Download bot .zip
 
-To get the bot and supporting files you'll use for this exercise, you'll need to clone the repo.
+To get the bot you'll use for this exercise, you'll need to download the bot you'll then import into Power Apps.
 
-1. Start Visual Studio Code.
-2. Open the palette (SHIFT+CTRL+P) and run a Git: Clone command to clone the https://github.com/MicrosoftLearning/ai-conversational repository to a local folder (it doesn't matter which folder).
-3. When the repository has been cloned, open the folder in Visual Studio Code, and show the folder in File Explorer.
+1. [Download the bot](https://aka.ms/ai102pvabot) from the Github repository. You'll need this `.zip' to import your bot later.
 
 ## Import your bot
 
@@ -21,7 +19,7 @@ A bot has already been built for you, and you just need to import it.
 1. In the top bar there is a dropdown for **Environment** - make sure you're in a good environment for your company or school (such as a sandbox) or create your own if you have permissions to do so
 1. On the left pane at the bottom, select **Solutions**
 1. Above the list of solutions, select **Import solution**
-1. Select the `AI102PVA_1_0_0_1.zip.zip` file from where you cloned the repo, in the `integrate-pva-bot` folder, and click Next
+1. Select the `AI102PVA_1_0_0_1.zip` file from where you downloaded the file to previously, and click Next
 1. View the details about the solution you're importing, and then select Import
 1. Importing may take a few minutes, and will provide details once it completes. Close that window
 1. Select the **Contoso customer service** chatbot from the list to open the PVA portal
@@ -42,7 +40,7 @@ Your bot is most useful if users can chat with it! Here we'll deploy your bot to
 2. Select **Microsoft Teams**, and select **Turn on Teams**
 3. Select **Open bot** button under the *Bot Preview* section
 4. Add your bot to teams - Teams will either launch for you, or you can use the web app
-5. Log in to Teams, select **Add bot**, and ask your bot "store location" to find Microsoft stores
+5. Log in to Teams, select **Add bot**, and ask your bot  for a "store location" to find Microsoft stores
 
 ## Deploy your bot elsewhere
 
